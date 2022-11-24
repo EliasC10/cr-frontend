@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { http } from '../../http/axios';
-import { Customer } from '../../models/Customer';
+import { Car } from '../../models/Car';
 import { Button, FloatingLabel, Form, InputGroup } from 'react-bootstrap';
 import './style.scss';
 
@@ -8,7 +8,7 @@ interface Props {
   toggleUpdate: (value: boolean) => void;
 }
 
-export function CreateCustomerForm(props: Props) {
+export function CreateCarForm(props: Props) {
   const [result, setResult] = useState<string>("");
   const [inputValue, setInputValue] = useState<string>("");
 
@@ -17,36 +17,36 @@ export function CreateCustomerForm(props: Props) {
     setInputValue(value);
   };
 
-  const createCustomer = () => {
-    http.post('/customers', { name: inputValue })
+  const createCar = () => {
+    http.post('/cars', { name: inputValue, kilometers: 0, available: "1" })
       .then(response => setResult(response.data.message))
       .then(() => setInputValue(""))
       .then(() => props.toggleUpdate(true));
   };
 
   return (
-    <div className='Customer-form'>
+    <div className='Car-form'>
       <FloatingLabel
         controlId="floatingInput"
-        label="Create Customer"
-        className="mb-3 Customer-form-input"
+        label="Create Car"
+        className="mb-3 Car-form-input"
       >
         <Form.Control
-          placeholder="Create Customer"
-          aria-label="Create Customer"
+          placeholder="Create Car"
+          aria-label="Create Car"
           aria-describedby="basic-addon1"
           value={ inputValue }
           onChange={ onChangeInput }
         />
       </FloatingLabel>
       <Button
-        className='Customer-form-submit'
+        className='Car-form-submit'
         variant='primary'
-        onClick={ createCustomer }
+        onClick={ createCar }
         disabled={ inputValue.length <= 0 } >
         Create
       </Button>
-      <p className='Customer-form-result'>{ result }</p>
+      <p className='Car-form-result'>{ result }</p>
     </div>
   );
 };

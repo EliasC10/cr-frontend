@@ -1,0 +1,51 @@
+.Car {
+  &-form {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+
+    &-input {
+      width: 30%;
+
+    }
+
+    &-submit {
+      margin-left: 20px;
+      height: 58px;
+      width: 100px;
+    }
+
+    &-result {
+      line-height: 50px;
+      margin-left: 20px;
+    }
+  }
+
+  &-list {
+    max-height: 60vh;
+    overflow-y: scroll;
+    width: 630px;
+
+    .list-group-heading {
+      font-weight: 600;
+    }
+
+    &-item {
+      display: flex !important;
+      gap: 50px;
+
+      label {
+        width: 150px;
+      }
+
+      .availability {
+        color: green;
+      }
+
+      .unavailable {
+         color: red;
+      }
+    }
+  }
+
+}

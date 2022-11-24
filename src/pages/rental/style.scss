@@ -1,0 +1,61 @@
+.Rental {
+  &-form {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+
+    &-input {
+      width: 250px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    &-select {
+      width: 250px !important;
+      margin-top: 20px;
+      height: 58px;
+      margin-right: 10px;
+    }
+
+    &-submit {
+      margin-top: 20px;;
+      height: 58px;
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    &-result {
+      margin-top: 20px;
+      line-height: 50px;
+      margin-left: 20px;
+    }
+  }
+
+  &-list {
+    max-height: 60vh;
+    overflow-y: scroll;
+    width: 1200px;
+
+    .list-group-heading {
+      font-weight: 600;
+    }
+
+    &-item {
+      display: flex !important;
+      gap: 50px;
+
+      label {
+        min-width: 150px;
+      }
+
+      .status {
+        color: green;
+      }
+
+      .closed {
+         color: red;
+      }
+    }
+  }
+
+}

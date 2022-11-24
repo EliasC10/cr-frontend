@@ -22,18 +22,18 @@ export function CustomerList(props: Props) {
   }, [shouldUpdate]);
 
   return (
-    <div>
-      <div>
-        <h4>Customers</h4>
-        <ul className="list-group">
-          { Array.isArray(customers) ? (
-            customers.map((customer, id) => (
-              <p key={ id } >
-                { customer.name }
-              </p>
-            ))) : undefined }
-        </ul>
-      </div>
+    <div className='Customer-list'>
+      <ul className="list-group">
+        <li className='list-group-heading list-group-item Customer-list-item'>
+          <label>Customer Name</label>
+        </li>
+        { Array.isArray(customers) ? (
+          customers.map((customer, id) => (
+            <li className='list-group-item' key={ id } >
+              { customer.name }
+            </li>
+          ))) : undefined }
+      </ul>
     </div>
   );
 };

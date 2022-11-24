@@ -1,0 +1,68 @@
+.App {
+  height: 100vh;
+  &-header{
+    height: 80px;
+    h1 {
+      color: black;
+      font-weight: 700;
+      width: 100%;
+      line-height: 80px;
+      font-size: 35px;
+      padding-left: 20px;
+      background-color: #008ae5;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  &-navigation {
+    padding-top: 10px;
+    width: 200px;
+    height: 100%;
+    background-color: #1fa6ff;
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      color: white;
+
+      li {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: 2px solid #008ae5;
+
+        Button {
+          background-color: #1fa6ff;
+          border: none;
+          width: 140px;
+        }
+
+        Button:hover{
+          background-color: #008ae5;
+        }
+
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      
+    }
+  }
+
+  &-page {
+    width: 100%;
+    margin: 30px;
+  }
+
+
+}

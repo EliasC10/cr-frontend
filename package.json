@@ -9,10 +9,13 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
+    "@types/react-bootstrap": "^0.32.32",
     "@types/react-dom": "^18.0.9",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.2.0",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
@@ -42,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node-sass": "^4.11.3",
+    "node-sass": "^7.0.3"
   }
 }
